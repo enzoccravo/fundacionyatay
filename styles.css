@@ -535,12 +535,28 @@ body {
     color: white;
 }
 
-/* ========== RESPONSIVE ========== */
+/* ========== RESPONSIVE - TABLET LANDSCAPE (1024px) ========== */
 @media (max-width: 1024px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .section {
+        padding: 7rem 0 4rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
 
     .about-grid,
     .contact-grid {
         grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .about-image {
+        order: -1;
     }
 
     .values-grid,
@@ -550,26 +566,74 @@ body {
 
     .stats-section {
         grid-template-columns: repeat(2, 1fr);
+        padding: 2.5rem;
     }
 
     .news-card.featured {
         grid-template-columns: 1fr;
     }
+
+    .news-card.featured .news-image img {
+        height: 300px;
+    }
 }
 
+/* ========== RESPONSIVE - TABLET PORTRAIT (768px) ========== */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+
     .header-container {
         flex-direction: column;
         gap: 1rem;
+        padding: 1rem;
+    }
+
+    .logo-section {
+        gap: 0.75rem;
+    }
+
+    .logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .site-name {
+        font-size: 1.3rem;
     }
 
     .nav-list {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 0.25rem;
+    }
+
+    .nav-list li a {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .section {
+        padding: 6rem 0 3rem;
+        min-height: auto;
     }
 
     .section-title {
-        font-size: 2.25rem;
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 3rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
     }
 
     .values-grid,
@@ -578,22 +642,384 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .value-card {
+        padding: 2rem;
+    }
+
+    .value-icon {
+        font-size: 2.5rem;
+    }
+
+    .value-card h3 {
+        font-size: 1.3rem;
+    }
+
     .news-card.featured {
         grid-column: span 1;
+    }
+
+    .news-card.featured .news-image img,
+    .news-card .news-image img {
+        height: 220px;
+    }
+
+    .news-content {
+        padding: 1.5rem;
+    }
+
+    .news-content h3 {
+        font-size: 1.25rem;
     }
 
     .stats-section {
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
+        padding: 2rem;
     }
 
     .stat-number {
         font-size: 2rem;
     }
 
+    .stat-label {
+        font-size: 0.9rem;
+    }
+
+    .program-card {
+        padding: 1.75rem;
+    }
+
+    .program-icon {
+        font-size: 2rem;
+    }
+
+    .program-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .contact-info h2,
+    .contact-form-container h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-item {
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .contact-form-container {
+        padding: 1.75rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.25rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.875rem 1rem;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+    }
+
+    .social-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+
+    .map-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer {
+        padding: 2rem 0;
+    }
+
     .footer-content {
         flex-direction: column;
         text-align: center;
+        gap: 1rem;
+    }
+
+    .footer-brand {
+        font-size: 1.1rem;
+    }
+
+    .footer-logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .footer-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* ========== RESPONSIVE - MOBILE (480px) ========== */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .header-container {
+        padding: 0.75rem 1rem;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .site-name {
+        font-size: 1.15rem;
+    }
+
+    .nav-list li a {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .section {
+        padding: 5.5rem 0 2.5rem;
+    }
+
+    .section-title {
+        font-size: 1.65rem;
+        line-height: 1.2;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-content p {
+        font-size: 0.95rem;
+    }
+
+    .about-image img {
+        border-radius: 15px;
+    }
+
+    .values-title {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .value-card {
+        padding: 1.5rem;
+        border-radius: 15px;
+    }
+
+    .value-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .value-card h3 {
+        font-size: 1.15rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .value-card p {
+        font-size: 0.9rem;
+    }
+
+    .stats-section {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding: 1.5rem;
+        border-radius: 15px;
+    }
+
+    .stat-number {
+        font-size: 1.65rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+
+    .news-card {
+        border-radius: 15px;
+    }
+
+    .news-card .news-image img,
+    .news-card.featured .news-image img {
+        height: 180px;
+    }
+
+    .news-content {
+        padding: 1.25rem;
+    }
+
+    .news-date {
+        font-size: 0.8rem;
+    }
+
+    .news-content h3 {
+        font-size: 1.1rem;
+        margin: 0.5rem 0;
+    }
+
+    .news-content p {
+        font-size: 0.9rem;
+    }
+
+    .programs-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .program-card {
+        padding: 1.5rem;
+        border-radius: 15px;
+    }
+
+    .program-icon {
+        font-size: 1.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .program-card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .program-card p {
+        font-size: 0.85rem;
+    }
+
+    .contact-info h2,
+    .contact-form-container h2 {
+        font-size: 1.35rem;
+    }
+
+    .contact-item {
+        gap: 0.75rem;
+    }
+
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+        flex-shrink: 0;
+        font-size: 1.25rem;
+        border-radius: 12px;
+    }
+
+    .contact-details h4 {
+        font-size: 0.95rem;
+    }
+
+    .contact-details p {
+        font-size: 0.9rem;
+    }
+
+    .contact-form-container {
+        padding: 1.5rem;
+        border-radius: 15px;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.75rem;
+        font-size: 0.95rem;
+        border-radius: 10px;
+    }
+
+    .btn-submit {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 10px;
+    }
+
+    .social-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.2rem;
+        border-radius: 10px;
+    }
+
+    .map-section h2 {
+        font-size: 1.35rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .map-placeholder iframe {
+        height: 280px;
+        border-radius: 15px;
+    }
+
+    .footer {
+        padding: 1.5rem 0;
+    }
+
+    .footer-brand {
+        font-size: 1rem;
+    }
+
+    .footer-logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer-text {
+        font-size: 0.85rem;
+    }
+
+    .footer-links a {
+        font-size: 0.85rem;
+    }
+}
+
+/* ========== EXTRA SMALL DEVICES (360px) ========== */
+@media (max-width: 360px) {
+    .nav-list {
+        gap: 0.15rem;
+    }
+
+    .nav-list li a {
+        padding: 0.4rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .stats-section {
+        padding: 1.25rem;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
     }
 }
 
@@ -605,4 +1031,42 @@ html {
 /* Scroll padding for fixed header */
 section {
     scroll-margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+    section {
+        scroll-margin-top: 120px;
+    }
+}
+
+/* Touch-friendly improvements for mobile */
+@media (hover: none) and (pointer: coarse) {
+
+    .value-card:hover,
+    .news-card:hover,
+    .program-card:hover {
+        transform: none;
+    }
+
+    .nav-list li a:hover {
+        transform: none;
+    }
+
+    .btn-submit:hover {
+        transform: none;
+    }
+}
+
+/* Improve tap targets for accessibility */
+@media (max-width: 768px) {
+
+    .nav-list li a,
+    .btn-link,
+    .social-icon,
+    .footer-links a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
