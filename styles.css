@@ -73,6 +73,19 @@ body {
     display: flex;
     list-style: none;
     gap: 0.5rem;
+    align-items: center;
+}
+
+.nav-list li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list li:not(:last-child)::after {
+    content: '|';
+    color: var(--background-color);
+    margin-left: 0.5rem;
+    opacity: 0.5;
 }
 
 .nav-list li a {
@@ -86,7 +99,6 @@ body {
     padding: 0.75rem 1.25rem;
     border-radius: 10px;
     transition: all 0.3s ease;
-
 }
 
 .nav-list li a:hover {
@@ -97,8 +109,7 @@ body {
 
 /* ========== SECTIONS COMMON ========== */
 .section {
-    padding: 8rem 0 5rem;
-    min-height: 100vh;
+    padding: 3rem 0;
 }
 
 .section-title {
@@ -118,12 +129,13 @@ body {
     text-align: center;
     font-size: 1.5rem;
     color: var(--azul-color);
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
-/* ========== LA FUNDACIÓN SECTION ========== */
-.section-fundacion {
+/* ========== INSTITUTO SECTION ========== */
+.section-instituto {
     background-color: var(--background-color);
+    padding-top: 6rem;
 }
 
 .about-grid {
@@ -141,62 +153,24 @@ body {
 }
 
 .about-content p {
-    color: #475569;
+    color: var(--azul-color);
     margin-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-image img {
-    width: 100%;
+    width: 70%;
     border-radius: 20px;
     box-shadow: 0 25px 50px rgba(102, 126, 234, 0.2);
 }
 
-.values-section {
-    margin-bottom: 5rem;
-}
 
-.values-title {
-    font-size: 2rem;
-    text-align: center;
-    color: #1e293b;
-    margin-bottom: 3rem;
-}
-
-.values-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-.value-card {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-}
-
-.value-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.15);
-}
-
-.value-icon {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-}
-
-.value-card h3 {
-    font-size: 1.5rem;
-    color: #1e293b;
-    margin-bottom: 1rem;
-}
-
-.value-card p {
-    color: #64748b;
-}
 
 .stats-section {
     display: grid;
@@ -225,101 +199,9 @@ body {
     opacity: 0.9;
 }
 
-/* ========== INFORMACIONES SECTION ========== */
-.section-info {
+/* ========== CURSOS SECTION ========== */
+.section-cursos {
     background-color: var(--background-color);
-}
-
-.news-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 5rem;
-}
-
-.news-card {
-    background: #f8fafc;
-    border-radius: 20px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.news-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-}
-
-.news-card.featured {
-    grid-column: span 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.news-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.news-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.news-card:hover .news-image img {
-    transform: scale(1.05);
-}
-
-.news-tag {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background-color: var(--azul-color);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-}
-
-.news-content {
-    padding: 2rem;
-}
-
-.news-date {
-    color: #667eea;
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.news-content h3 {
-    font-size: 1.5rem;
-    color: #1e293b;
-    margin: 0.75rem 0;
-}
-
-.news-content p {
-    color: #64748b;
-    margin-bottom: 1rem;
-}
-
-.btn-link {
-    color: #667eea;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.btn-link:hover {
-    color: #764ba2;
-}
-
-.programs-section h2 {
-    font-size: 2rem;
-    text-align: center;
-    color: #1e293b;
-    margin-bottom: 3rem;
 }
 
 .programs-grid {
@@ -356,29 +238,28 @@ body {
     opacity: 0.9;
 }
 
-/* ========== CONTACTOS SECTION ========== */
-.section-contact {
+/* ========== CONTACTO SECTION ========== */
+.section-contacto {
     background-color: var(--background-color);
 }
 
 .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-bottom: 4rem;
+    align-items: center;
 }
 
-.contact-info h2,
-.contact-form-container h2 {
-    font-size: 1.75rem;
-    color: #1e293b;
-    margin-bottom: 2rem;
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .contact-item {
     display: flex;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    margin: 2rem;
 }
 
 .contact-icon {
@@ -399,10 +280,6 @@ body {
 
 .contact-details p {
     color: #64748b;
-}
-
-.social-links {
-    margin-top: 2rem;
 }
 
 .social-links h4 {
@@ -434,59 +311,7 @@ body {
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
 }
 
-.contact-form-container {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-}
 
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    color: #1e293b;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1rem 1.25rem;
-    border: 2px solid #e2e8f0;
-    border-radius: 12px;
-    font-size: 1rem;
-    font-family: inherit;
-    transition: all 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
-}
-
-.btn-submit {
-    width: 100%;
-    padding: 1rem 2rem;
-    background-color: var(--azul-color);
-    color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-submit:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-}
 
 
 
@@ -495,6 +320,7 @@ body {
     background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
     color: white;
     padding: 3rem 0;
+    margin-top: 2rem;
 }
 
 .footer-content {
@@ -570,14 +396,6 @@ body {
         grid-template-columns: repeat(2, 1fr);
         padding: 2.5rem;
     }
-
-    .news-card.featured {
-        grid-template-columns: 1fr;
-    }
-
-    .news-card.featured .news-image img {
-        height: 300px;
-    }
 }
 
 /* ========== RESPONSIVE - TABLET PORTRAIT (768px) ========== */
@@ -613,8 +431,7 @@ body {
     }
 
     .section {
-        padding: 6rem 0 3rem;
-        min-height: auto;
+        padding: 2rem 0;
     }
 
     .section-title {
@@ -623,7 +440,7 @@ body {
 
     .section-subtitle {
         font-size: 1.1rem;
-        margin-bottom: 3rem;
+        margin-bottom: 1.5rem;
     }
 
     .about-content h2 {
@@ -634,40 +451,11 @@ body {
         font-size: 1rem;
     }
 
-    .values-grid,
-    .programs-grid,
-    .news-grid {
+    .programs-grid {
         grid-template-columns: 1fr;
     }
 
-    .value-card {
-        padding: 2rem;
-    }
 
-    .value-icon {
-        font-size: 2.5rem;
-    }
-
-    .value-card h3 {
-        font-size: 1.3rem;
-    }
-
-    .news-card.featured {
-        grid-column: span 1;
-    }
-
-    .news-card.featured .news-image img,
-    .news-card .news-image img {
-        height: 220px;
-    }
-
-    .news-content {
-        padding: 1.5rem;
-    }
-
-    .news-content h3 {
-        font-size: 1.25rem;
-    }
 
     .stats-section {
         grid-template-columns: 1fr 1fr;
@@ -695,8 +483,7 @@ body {
         font-size: 1.1rem;
     }
 
-    .contact-info h2,
-    .contact-form-container h2 {
+    .contact-info h2 {
         font-size: 1.5rem;
         margin-bottom: 1.5rem;
     }
@@ -712,18 +499,7 @@ body {
         font-size: 1.5rem;
     }
 
-    .contact-form-container {
-        padding: 1.75rem;
-    }
 
-    .form-group {
-        margin-bottom: 1.25rem;
-    }
-
-    .form-group input,
-    .form-group textarea {
-        padding: 0.875rem 1rem;
-    }
 
     .social-icons {
         flex-wrap: wrap;
@@ -812,75 +588,9 @@ body {
         border-radius: 15px;
     }
 
-    .values-title {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-    }
 
-    .value-card {
-        padding: 1.5rem;
-        border-radius: 15px;
-    }
 
-    .value-icon {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
 
-    .value-card h3 {
-        font-size: 1.15rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .value-card p {
-        font-size: 0.9rem;
-    }
-
-    .stats-section {
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-        padding: 1.5rem;
-        border-radius: 15px;
-    }
-
-    .stat-number {
-        font-size: 1.65rem;
-    }
-
-    .stat-label {
-        font-size: 0.8rem;
-    }
-
-    .news-card {
-        border-radius: 15px;
-    }
-
-    .news-card .news-image img,
-    .news-card.featured .news-image img {
-        height: 180px;
-    }
-
-    .news-content {
-        padding: 1.25rem;
-    }
-
-    .news-date {
-        font-size: 0.8rem;
-    }
-
-    .news-content h3 {
-        font-size: 1.1rem;
-        margin: 0.5rem 0;
-    }
-
-    .news-content p {
-        font-size: 0.9rem;
-    }
-
-    .programs-section h2 {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-    }
 
     .program-card {
         padding: 1.5rem;
@@ -901,51 +611,8 @@ body {
         font-size: 0.85rem;
     }
 
-    .contact-info h2,
-    .contact-form-container h2 {
+    .contact-info h2 {
         font-size: 1.35rem;
-    }
-
-    .contact-item {
-        gap: 0.75rem;
-    }
-
-    .contact-icon {
-        width: 45px;
-        height: 45px;
-        flex-shrink: 0;
-        font-size: 1.25rem;
-        border-radius: 12px;
-    }
-
-    .contact-details h4 {
-        font-size: 0.95rem;
-    }
-
-    .contact-details p {
-        font-size: 0.9rem;
-    }
-
-    .contact-form-container {
-        padding: 1.5rem;
-        border-radius: 15px;
-    }
-
-    .form-group label {
-        font-size: 0.9rem;
-    }
-
-    .form-group input,
-    .form-group textarea {
-        padding: 0.75rem;
-        font-size: 0.95rem;
-        border-radius: 10px;
-    }
-
-    .btn-submit {
-        padding: 0.875rem 1.5rem;
-        font-size: 1rem;
-        border-radius: 10px;
     }
 
     .social-icon {
@@ -1026,17 +693,11 @@ section {
 /* Touch-friendly improvements for mobile */
 @media (hover: none) and (pointer: coarse) {
 
-    .value-card:hover,
-    .news-card:hover,
     .program-card:hover {
         transform: none;
     }
 
     .nav-list li a:hover {
-        transform: none;
-    }
-
-    .btn-submit:hover {
         transform: none;
     }
 }
@@ -1045,7 +706,6 @@ section {
 @media (max-width: 768px) {
 
     .nav-list li a,
-    .btn-link,
     .social-icon,
     .footer-links a {
         min-height: 44px;
