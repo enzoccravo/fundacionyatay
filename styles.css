@@ -49,6 +49,27 @@ body {
     z-index: 1000;
 }
 
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/Lunares-azul-Yatay.png');
+    background-repeat: repeat;
+    background-size: 200px;
+    background-position: center;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.header-container {
+    position: relative;
+    z-index: 1;
+}
+
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -136,6 +157,27 @@ body {
 .section-instituto {
     background-color: var(--background-color);
     padding-top: 6rem;
+    position: relative;
+}
+
+.section-instituto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/Abstracto-1.png');
+    background-repeat: repeat;
+    background-size: 200px;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.section-instituto>.container {
+    position: relative;
+    z-index: 1;
 }
 
 .about-grid {
@@ -172,32 +214,6 @@ body {
 
 
 
-.stats-section {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    background-color: var(--azul-color);
-    padding: 3rem;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
-}
-
-.stat-item {
-    text-align: center;
-    color: white;
-}
-
-.stat-number {
-    display: block;
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-
-.stat-label {
-    font-size: 1rem;
-    opacity: 0.9;
-}
 
 /* ========== CURSOS SECTION ========== */
 .section-cursos {
@@ -206,36 +222,88 @@ body {
 
 .programs-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 
 .program-card {
     background-color: var(--azul-color);
     color: white;
-    padding: 2rem;
     border-radius: 20px;
-    text-align: center;
+    overflow: hidden;
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.program-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/Abstracto-1.png');
+    background-repeat: repeat;
+    background-size: 200px;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.program-content {
+    position: relative;
+    z-index: 1;
 }
 
 .program-card:hover {
-    transform: translateY(-5px) scale(1.02);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(9, 67, 93, 0.3);
 }
 
-.program-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+.program-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-.program-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
+.program-content {
+    padding: 1.5rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-.program-card p {
-    font-size: 0.95rem;
+.program-supertitle {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.8;
+    color: var(--verde-yatay-color);
+    font-weight: 500;
+}
+
+.program-title {
+    font-family: var(--abril-font);
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.program-subtitle {
+    font-size: 1rem;
     opacity: 0.9;
+    font-style: italic;
+}
+
+.program-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.85;
+    margin-top: 0.5rem;
 }
 
 /* ========== CONTACTO SECTION ========== */
@@ -317,14 +385,37 @@ body {
 
 /* ========== FOOTER ========== */
 .footer {
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    background-color: var(--azul-profundo-color);
     color: white;
     padding: 3rem 0;
     margin-top: 2rem;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/Lunares-azul-Yatay.png');
+    background-repeat: repeat;
+    background-size: 200px;
+    background-position: center;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.footer>.container {
+    position: relative;
+    z-index: 1;
 }
 
 .footer-content {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -339,9 +430,19 @@ body {
     font-weight: 600;
 }
 
+.textos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
 .footer-logo {
-    height: 60px;
+    height: 100px;
     border-radius: 10px;
+    filter: brightness(0) invert(1);
 }
 
 .footer-text {
@@ -392,10 +493,7 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .stats-section {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 2.5rem;
-    }
+
 }
 
 /* ========== RESPONSIVE - TABLET PORTRAIT (768px) ========== */
@@ -486,32 +584,16 @@ body {
         grid-template-columns: 1fr;
     }
 
-
-
-    .stats-section {
-        grid-template-columns: 1fr 1fr;
-        gap: 1.5rem;
-        padding: 2rem;
+    .program-image {
+        height: 180px;
     }
 
-    .stat-number {
-        font-size: 2rem;
+    .program-content {
+        padding: 1.25rem 1.5rem 1.5rem;
     }
 
-    .stat-label {
-        font-size: 0.9rem;
-    }
-
-    .program-card {
-        padding: 1.75rem;
-    }
-
-    .program-icon {
-        font-size: 2rem;
-    }
-
-    .program-card h3 {
-        font-size: 1.1rem;
+    .program-title {
+        font-size: 1.5rem;
     }
 
     .contact-info h2 {
@@ -623,22 +705,27 @@ body {
 
 
 
-    .program-card {
-        padding: 1.5rem;
-        border-radius: 15px;
+    .program-image {
+        height: 160px;
     }
 
-    .program-icon {
-        font-size: 1.75rem;
-        margin-bottom: 0.75rem;
+    .program-content {
+        padding: 1rem 1.25rem 1.25rem;
     }
 
-    .program-card h3 {
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
+    .program-supertitle {
+        font-size: 0.75rem;
     }
 
-    .program-card p {
+    .program-title {
+        font-size: 1.35rem;
+    }
+
+    .program-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .program-description {
         font-size: 0.85rem;
     }
 
@@ -692,17 +779,7 @@ body {
         font-size: 1.5rem;
     }
 
-    .stats-section {
-        padding: 1.25rem;
-    }
 
-    .stat-number {
-        font-size: 1.5rem;
-    }
-
-    .stat-label {
-        font-size: 0.75rem;
-    }
 }
 
 /* Smooth scrolling */
