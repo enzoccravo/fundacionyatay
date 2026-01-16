@@ -25,10 +25,27 @@
 body {
     font-family: 'Agenda', sans-serif;
     font-weight: normal;
-    background: var(--background-color);
+    background-color: var(--background-color);
     color: var(--azul-profundo-color);
     line-height: 1.2;
     letter-spacing: 0.03em;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/Abstracto-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .container {
@@ -155,29 +172,7 @@ body {
 
 /* ========== INSTITUTO SECTION ========== */
 .section-instituto {
-    background-color: var(--background-color);
     padding-top: 6rem;
-    position: relative;
-}
-
-.section-instituto::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/assets/Abstracto-1.png');
-    background-repeat: repeat;
-    background-size: 200px;
-    opacity: 0.15;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.section-instituto>.container {
-    position: relative;
-    z-index: 1;
 }
 
 .about-grid {
@@ -342,17 +337,21 @@ body {
 }
 
 .contact-details h4 {
-    color: #1e293b;
+    color: var(--azul-profundo-color);
     margin-bottom: 0.25rem;
+    font-size: 1.5rem;
 }
 
 .contact-details p {
-    color: #64748b;
+    color: var(--azul-color);
+    font-size: 1.2rem;
 }
 
 .social-links h4 {
-    color: #1e293b;
+    color: var(--azul-profundo-color);
     margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 .social-icons {
