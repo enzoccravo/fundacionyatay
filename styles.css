@@ -90,7 +90,7 @@ body::before {
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -317,11 +317,13 @@ body::before {
 .contact-info {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .contact-item {
     display: flex;
+    flex: 1;
     margin: 2rem;
 }
 
@@ -386,7 +388,7 @@ body::before {
 .footer {
     background-color: var(--azul-profundo-color);
     color: white;
-    padding: 3rem 0;
+    padding: 1.5rem 0;
     margin-top: 2rem;
     position: relative;
 }
@@ -424,7 +426,9 @@ body::before {
 .footer-brand {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
     font-size: 1.25rem;
     font-weight: 600;
 }
@@ -439,9 +443,21 @@ body::before {
 }
 
 .footer-logo {
-    height: 100px;
+    max-height: 60px;
     border-radius: 10px;
     filter: brightness(0) invert(1);
+}
+
+#logo-ppgpc {
+    max-height: 150px;
+}
+
+#logo-una {
+    filter: none;
+}
+
+.footer-logo-lg {
+    max-height: 90px;
 }
 
 .footer-text {
@@ -470,21 +486,16 @@ body::before {
     }
 
     .section {
-        padding: 7rem 0 4rem;
+        padding-top: 1rem;
+        padding-bottom: 0;
+    }
+
+    .section-instituto {
+        padding-top: 7rem;
     }
 
     .section-title {
         font-size: 2.5rem;
-    }
-
-    .about-grid,
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-
-    .about-image {
-        order: -1;
     }
 
     .values-grid,
@@ -508,11 +519,11 @@ body::before {
     }
 
     .logo-section {
-        gap: 0.75rem;
+        gap: 0.5rem;
     }
 
     .logo {
-        height: 60px;
+        height: 50px;
         width: auto;
     }
 
@@ -523,8 +534,8 @@ body::before {
     }
 
     .nav-list li a {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
+        padding: 0.6rem;
+        font-size: 1.2rem;
     }
 
     .nav-list li:not(:last-child)::after {
@@ -553,7 +564,7 @@ body::before {
     }
 
     .about-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 2rem;
     }
 
@@ -562,7 +573,7 @@ body::before {
     }
 
     .about-image img {
-        width: 60%;
+        width: 70%;
     }
 
     .section-instituto {
@@ -570,21 +581,24 @@ body::before {
     }
 
     .contact-info {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .contact-item {
+        align-items: center;
+        gap: 0;
         margin: 1rem;
         flex-direction: column;
+        flex-wrap: wrap;
         text-align: center;
     }
 
     .programs-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .program-image {
-        height: 180px;
+        height: 0;
     }
 
     .program-content {
@@ -597,11 +611,6 @@ body::before {
 
     .contact-info h2 {
         font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .contact-item {
-        gap: 1rem;
         margin-bottom: 1.5rem;
     }
 
@@ -640,12 +649,14 @@ body::before {
     }
 
     .footer-logo {
-        width: 35px;
-        height: 35px;
+        max-height: 80px;
+    }
+
+    .footer-content .textos {
+        gap: .5rem;
     }
 
     .footer-links {
-        flex-direction: column;
         gap: 0.75rem;
     }
 
@@ -661,11 +672,12 @@ body::before {
     }
 
     .header-container {
-        padding: 0.75rem 1rem;
+        flex-direction: row;
+        padding: 0.75rem 3rem;
     }
 
     .logo {
-        height: 50px;
+        height: 40px;
         width: auto;
     }
 
@@ -674,12 +686,9 @@ body::before {
         font-size: 0.85rem;
     }
 
-    .section {
-        padding: 5.5rem 0 2.5rem;
-    }
-
     .section-instituto {
-        padding-top: 12rem;
+        padding-top: 4rem;
+        padding-bottom: 0;
     }
 
     .section-title {
@@ -692,6 +701,10 @@ body::before {
         margin-bottom: 2rem;
     }
 
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
     .about-content h2 {
         font-size: 1.5rem;
     }
@@ -702,11 +715,8 @@ body::before {
 
     .about-image img {
         border-radius: 15px;
+        width: 70%;
     }
-
-
-
-
 
     .program-image {
         height: 160px;
@@ -754,8 +764,7 @@ body::before {
     }
 
     .footer-logo {
-        width: 30px;
-        height: 30px;
+        max-height: 50px;
     }
 
     .footer-text {
