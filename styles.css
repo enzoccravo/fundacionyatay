@@ -794,6 +794,750 @@ body::before {
 
 }
 
+/* ========== DIPLOMADO PAGE STYLES ========== */
+
+/* Hero del Diplomado */
+.diplomado-hero {
+    background: linear-gradient(135deg, var(--azul-profundo-color) 0%, var(--azul-color) 100%);
+    padding: 8rem 0 4rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-top: 100px;
+}
+
+.diplomado-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/Abstracto-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.diplomado-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.diplomado-supertitle {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--verde-yatay-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.diplomado-title {
+    font-family: var(--abril-font);
+    font-size: 2.75rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.diplomado-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Presentación */
+.section-presentacion {
+    padding-top: 4rem;
+}
+
+.presentacion-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.presentacion-text {
+    font-size: 1.3rem;
+    color: var(--azul-color);
+    line-height: 1.7;
+}
+
+/* Acordeones */
+.section-acordeones {
+    padding-bottom: 3rem;
+}
+
+.acordeones-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.acordeon {
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(5, 33, 57, 0.08);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.acordeon:hover {
+    box-shadow: 0 8px 25px rgba(5, 33, 57, 0.12);
+}
+
+.acordeon-header {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: inherit;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.acordeon-header:hover {
+    background-color: rgba(9, 67, 93, 0.03);
+}
+
+.acordeon-titulo {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--azul-profundo-color);
+}
+
+.acordeon-icon {
+    font-size: 1.5rem;
+    color: var(--azul-color);
+    transition: transform 0.3s ease;
+    font-weight: 300;
+}
+
+.acordeon-open .acordeon-icon {
+    transform: rotate(45deg);
+}
+
+.acordeon-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 2rem;
+}
+
+.acordeon-open .acordeon-content {
+    max-height: 2000px;
+    padding: 0 2rem 2rem;
+}
+
+.acordeon-content p {
+    color: var(--azul-color);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.acordeon-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.acordeon-content ul li {
+    color: var(--azul-color);
+    font-size: 1.05rem;
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.acordeon-content ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--verde-yatay-color);
+}
+
+/* Módulos Grid */
+.modulos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.modulo-card {
+    background: linear-gradient(135deg, var(--azul-color) 0%, var(--azul-profundo-color) 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.modulo-numero {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--verde-yatay-color);
+    font-weight: 500;
+}
+
+.modulo-card h4 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+.modulo-card p {
+    font-size: 0.95rem !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    margin-bottom: 0 !important;
+}
+
+.modulo-periodo {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* 3-column grid for more modules */
+.modulos-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+    .modulos-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .modulos-grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Coordinadores Grid */
+.coordinadores-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.coordinador-item {
+    text-align: center;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .coordinadores-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Country badges */
+.docentes-pais {
+    margin-bottom: 1.5rem;
+}
+
+.pais-badge {
+    display: inline-block;
+    background: var(--azul-color);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+/* Beneficio destacado */
+.beneficio-destacado {
+    background: rgba(9, 236, 176, 0.15);
+    border: 2px solid var(--verde-yatay-color);
+    border-radius: 12px;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.beneficio-icon {
+    font-size: 2rem;
+}
+
+.beneficio-destacado p {
+    margin: 0 !important;
+    font-size: 1.1rem !important;
+}
+
+
+/* Docentes */
+.docente-principal {
+    background: var(--rosado-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.docente-principal h4 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--azul-color);
+    margin-bottom: 0.5rem;
+}
+
+.docente-nombre {
+    font-size: 1.2rem !important;
+    font-weight: 600;
+    color: var(--azul-profundo-color) !important;
+    margin-bottom: 0.25rem !important;
+}
+
+.docente-origen {
+    font-size: 0.95rem;
+    color: var(--azul-color);
+}
+
+.docentes-grid h4 {
+    font-size: 1rem;
+    color: var(--azul-profundo-color);
+    margin-bottom: 1rem;
+}
+
+.docente-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(9, 67, 93, 0.1);
+}
+
+.docente-item:last-of-type {
+    border-bottom: none;
+}
+
+.docente-especialidad {
+    font-size: 0.95rem;
+    color: var(--azul-color);
+    opacity: 0.8;
+}
+
+.docentes-invitados {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(9, 236, 176, 0.1);
+    border-radius: 10px;
+    border-left: 4px solid var(--verde-yatay-color);
+}
+
+.docentes-invitados p {
+    margin-bottom: 0 !important;
+}
+
+/* Detalles Técnicos */
+.detalles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.detalle-item {
+    background: var(--background-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.detalle-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.detalle-item h4 {
+    font-size: 1rem;
+    color: var(--azul-profundo-color);
+    margin-bottom: 0.5rem;
+}
+
+.detalle-item p {
+    font-size: 1rem !important;
+    margin-bottom: 0.25rem !important;
+}
+
+.detalle-extra {
+    font-size: 0.85rem;
+    color: var(--azul-color);
+    opacity: 0.8;
+}
+
+/* Inversión */
+.inversion-info {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.precio-info {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Hero Badge */
+.hero-badge {
+    margin-top: 1.5rem;
+    display: inline-block;
+    background: rgba(9, 236, 176, 0.2);
+    border: 1px solid var(--verde-yatay-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+}
+
+/* Wide module card */
+.modulo-card-wide {
+    grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+    .modulo-card-wide {
+        grid-column: span 1;
+    }
+}
+
+/* Certificaciones */
+.certificaciones-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.certificacion-item {
+    background: var(--background-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.certificacion-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.certificacion-item h4 {
+    font-size: 1rem;
+    color: var(--azul-profundo-color);
+    margin-bottom: 0.5rem;
+}
+
+.certificacion-item p {
+    font-size: 0.95rem !important;
+    margin-bottom: 0 !important;
+}
+
+.certificacion-destacada {
+    background: linear-gradient(135deg, var(--azul-color) 0%, var(--azul-profundo-color) 100%);
+    color: white;
+}
+
+.certificacion-destacada h4,
+.certificacion-destacada p {
+    color: white !important;
+}
+
+@media (max-width: 768px) {
+    .certificaciones-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Aranceles / Pricing */
+.aranceles-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.arancel-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: var(--background-color);
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+
+.arancel-tipo {
+    font-weight: 500;
+    color: var(--azul-profundo-color);
+}
+
+.arancel-precio {
+    font-weight: 600;
+    color: var(--azul-color);
+}
+
+.arancel-descuento {
+    border-color: var(--azul-color);
+}
+
+.arancel-destacado {
+    background: linear-gradient(135deg, var(--verde-yatay-color) 0%, #00d9a0 100%);
+    border-color: var(--verde-yatay-color);
+}
+
+.arancel-destacado .arancel-tipo,
+.arancel-destacado .arancel-precio {
+    color: var(--azul-profundo-color);
+}
+
+/* Alliance logos */
+.instituciones-full {
+    grid-template-columns: 1fr 2fr;
+}
+
+.alianza-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.alianza-logos .institucion-logo {
+    max-height: 60px;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .instituciones-full {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Inscripción */
+.inscripcion-info {
+    text-align: center;
+}
+
+.inscripcion-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.btn-inscripcion {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--verde-yatay-color) 0%, #00d9a0 100%);
+    color: var(--azul-profundo-color);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(9, 236, 176, 0.3);
+}
+
+.btn-inscripcion:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(9, 236, 176, 0.4);
+}
+
+.btn-inscripcion.btn-secondary {
+    background: white;
+    border: 2px solid var(--azul-color);
+    color: var(--azul-color);
+    box-shadow: 0 4px 15px rgba(9, 67, 93, 0.1);
+}
+
+.btn-inscripcion.btn-secondary:hover {
+    background: var(--azul-color);
+    color: white;
+}
+
+/* Respaldo Institucional */
+.section-respaldo {
+    background: var(--rosado-color);
+    padding: 3rem 0;
+}
+
+.instituciones-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.institucion-item {
+    text-align: center;
+}
+
+.institucion-rol {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--azul-color);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.institucion-logo {
+    max-height: 80px;
+    max-width: 200px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.institucion-item p {
+    font-size: 0.95rem;
+    color: var(--azul-color);
+}
+
+/* Organiza row - logos in columns */
+.organiza-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.organiza-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+}
+
+/* Apoyan row - logos in columns */
+.instituciones-apoyo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+.apoyo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 220px;
+    text-align: center;
+}
+
+.apoyo-item p {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+/* Grupo de logos (ej: UNESCO + UFSM) */
+.apoyo-logos-grupo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.apoyo-logos-grupo .institucion-logo {
+    margin-bottom: 0;
+}
+
+/* Responsive para Diplomado */
+@media (max-width: 768px) {
+    .diplomado-hero {
+        padding: 6rem 0 3rem;
+        margin-top: 120px;
+    }
+
+    .diplomado-title {
+        font-size: 2rem;
+    }
+
+    .diplomado-subtitle {
+        font-size: 1rem;
+    }
+
+    .presentacion-text {
+        font-size: 1.1rem;
+    }
+
+    .acordeon-header {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .acordeon-titulo {
+        font-size: 1.1rem;
+    }
+
+    .acordeon-content {
+        padding: 0 1.5rem;
+    }
+
+    .acordeon-open .acordeon-content {
+        padding: 0 1.5rem 1.5rem;
+    }
+
+    .modulos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detalles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .instituciones-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .diplomado-hero {
+        margin-top: 70px;
+        padding: 4rem 0 2rem;
+    }
+
+    .diplomado-title {
+        font-size: 1.6rem;
+    }
+
+    .acordeon-header {
+        padding: 1rem 1.25rem;
+    }
+
+    .inscripcion-actions {
+        flex-direction: column;
+    }
+
+    .btn-inscripcion {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
