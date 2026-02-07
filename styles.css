@@ -103,7 +103,7 @@ body::before {
 }
 
 .logo {
-    height: 80px;
+    height: 100px;
     object-fit: contain;
 }
 
@@ -178,7 +178,7 @@ body::before {
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 1rem;
     align-items: center;
     margin-bottom: 5rem;
 }
@@ -204,7 +204,6 @@ body::before {
 .about-image img {
     width: 100%;
     border-radius: 20px;
-    box-shadow: 0 25px 50px rgba(102, 126, 234, 0.2);
 }
 
 
