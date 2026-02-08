@@ -145,6 +145,76 @@ body::before {
     transform: translateY(-2px);
 }
 
+/* Dropdown Menu Styles */
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--azul-profundo-color);
+    border-radius: 12px;
+    padding: 0.5rem 0;
+    min-width: 200px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    list-style: none;
+    padding-top: 1rem;
+}
+
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: transparent;
+}
+
+.dropdown-menu::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid var(--azul-profundo-color);
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.dropdown-menu li::after {
+    display: none;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: var(--background-color);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-radius: 0;
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--azul-color);
+    color: white;
+    transform: none;
+}
+
 /* ========== SECTIONS COMMON ========== */
 .section {
     padding: 3rem 0;
@@ -172,7 +242,7 @@ body::before {
 
 /* ========== INSTITUTO SECTION ========== */
 .section-instituto {
-    padding-top: 6rem;
+    padding-top: 9rem;
 }
 
 .about-grid {
